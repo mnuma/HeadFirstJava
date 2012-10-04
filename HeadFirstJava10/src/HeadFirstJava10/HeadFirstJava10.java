@@ -1,11 +1,13 @@
 package HeadFirstJava10;
 
+import java.util.Date;
+
 public class HeadFirstJava10 {
 
 	//Mathのコンストラクタがprivate宣言されているのでエラー
 	//Math mathObject = new Math();
 
-	public void mathTest() {
+	public void math() {
 
 		/*
 		 * Mathクラスメソッド
@@ -26,6 +28,22 @@ public class HeadFirstJava10 {
 		//最大値を返す
 		Math.max(24, 240);
 
+	}
+
+	public void wrap() {
+
+	}
+
+	//フォーマッティング
+	public void formatsTest() {
+		//10進数として扱いカンマを付ける
+		String s = String.format("%, d",10000000);
+		System.out.println(s);
+
+		Date today = new Date();
+		System.out.println(today);
+		String text = String.format("%tY/%<tm/%<td", today);
+		System.out.println(text);
 	}
 
 }
